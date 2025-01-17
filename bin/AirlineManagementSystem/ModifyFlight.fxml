@@ -1,88 +1,51 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="477.0" prefWidth="446.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AirlineManagementSystem.ModifyFlightController">
    <children>
-      <Label fx:id="AddFlightLabel" layoutX="153.0" layoutY="14.0" prefHeight="46.0" prefWidth="294.0" text="Modify Flight Module" textAlignment="CENTER" textFill="#841d2d">
+      <Label fx:id="ModifyFlightLabel" layoutX="81.0" layoutY="47.0" prefHeight="46.0" prefWidth="284.0" text="Modify Flight Module" textAlignment="CENTER" textFill="#841d2d">
          <font>
             <Font name="System Bold" size="28.0" />
          </font>
       </Label>
-      <Label fx:id="ModifyFlightFlightNameLabel" layoutX="121.0" layoutY="108.0" text="Flight Name">
+      <ComboBox fx:id="ModifyFlightComboBox" layoutX="160.0" layoutY="117.0" prefWidth="150.0" promptText="Select Flight Code" />
+      <Label fx:id="ModifyFlightFlightNameLabel" layoutX="73.0" layoutY="170.0" text="Flight Name">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
-      <Label fx:id="ModifyFlightFlightSourceLabel" layoutX="121.0" layoutY="149.0" text="Flight Source">
+      <TextField fx:id="ModifyFlightFlightNameTextField" layoutX="226.0" layoutY="167.0" style="-fx-background-radius: 10;" />
+      <Label fx:id="ModifyFlightFlightSourceLabel" layoutX="73.0" layoutY="210.0" text="Source">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
-      <Label fx:id="ModifyFlightFlightDestinationLabel" layoutX="120.0" layoutY="188.0" text="Flight Destination">
+      <TextField fx:id="ModifyFlightFlightSourceTextField" layoutX="226.0" layoutY="207.0" style="-fx-background-radius: 10;" />
+      <Label fx:id="ModifyFlightFlightDestinationLabel" layoutX="73.0" layoutY="250.0" text="Destination">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
-      <TextField fx:id="ModifyFlightFlightSourceTextField" layoutX="265.0" layoutY="146.0" prefHeight="30.0" prefWidth="216.0" promptText="Enter New Flight Source" style="-fx-background-radius: 10;">
-         <font>
-            <Font size="14.0" />
-         </font>
-      </TextField>
-      <TextField fx:id="ModifyFlightFlightDestinationTextField" layoutX="265.0" layoutY="184.0" prefHeight="30.0" prefWidth="216.0" promptText="Enter New Flight Destination" style="-fx-background-radius: 10;">
-         <font>
-            <Font size="14.0" />
-         </font>
-      </TextField>
-      <TextField fx:id="ModifyFlightFlightCapacityTextField" layoutX="265.0" layoutY="230.0" prefHeight="30.0" prefWidth="216.0" promptText="Enter New Flight Capacity" style="-fx-background-radius: 10;">
-         <font>
-            <Font size="14.0" />
-         </font>
-      </TextField>
-      <Label fx:id="ModifyFlightFlightCapacityLabel" layoutX="121.0" layoutY="233.0" text="Flight Capacity">
+      <TextField fx:id="ModifyFlightFlightDestinationTextField" layoutX="226.0" layoutY="247.0" style="-fx-background-radius: 10;" />
+      <Label fx:id="ModifyFlightFlightCapacityLabel" layoutX="73.0" layoutY="290.0" text="Capacity">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
-      <TextField fx:id="ModifyFlightFlightNameTextField" layoutX="265.0" layoutY="105.0" prefHeight="30.0" prefWidth="216.0" promptText="Enter New Flight Name" style="-fx-background-radius: 10;">
-         <font>
-            <Font size="14.0" />
-         </font>
-      </TextField>
-      <ComboBox fx:id="ModifyFlightComboBox" layoutX="225.0" layoutY="68.0" prefWidth="150.0" promptText="Select Flight Code" />
-      <Label fx:id="ModifyFlightFlightDateOfJourneyLabel" layoutX="121.0" layoutY="278.0" text="Flight Date of Journey">
+      <TextField fx:id="ModifyFlightFlightCapacityTextField" layoutX="226.0" layoutY="287.0" style="-fx-background-radius: 10;" />
+      <Label fx:id="ModifyFlightFlightDateOfJourneyLabel" layoutX="73.0" layoutY="330.0" text="Date of Journey">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
-      <DatePicker fx:id="ModifyFlightFlightDateOfJourneyDatePicker" layoutX="265.0" layoutY="275.0" prefHeight="30.0" prefWidth="216.0" promptText="Enter New Flight Date of Journey" />
-      <HBox layoutX="128.0" layoutY="338.0" prefHeight="34.0" prefWidth="345.0">
-         <children>
-            <Button mnemonicParsing="false" prefHeight="34.0" prefWidth="97.0" style="-fx-background-radius: 10; -fx-background-color: #1a2b4a;" text="Clear Fields" textFill="WHITE">
-               <font>
-                  <Font name="System Bold" size="12.0" />
-               </font>
-            </Button>
-            <Label prefHeight="17.0" prefWidth="40.0" />
-            <Button mnemonicParsing="false" prefHeight="34.0" prefWidth="102.0" style="-fx-background-radius: 10; -fx-background-color: #1a2b4a;" text="Modify Flight" textFill="WHITE">
-               <font>
-                  <Font name="System Bold" size="12.0" />
-               </font>
-            </Button>
-            <Label prefHeight="17.0" prefWidth="40.0" />
-            <Button mnemonicParsing="false" prefHeight="34.0" prefWidth="91.0" style="-fx-background-radius: 10; -fx-background-color: #1a2b4a;" text="Close" textFill="WHITE">
-               <font>
-                  <Font name="System Bold" size="12.0" />
-               </font>
-            </Button>
-         </children>
-      </HBox>
+      <DatePicker fx:id="ModifyFlightFlightDateOfJourneyDatePicker" layoutX="226.0" layoutY="327.0" style="-fx-background-radius: 10;" />
+      <Button fx:id="ModifyFlightModifyFlightButton" layoutX="160.0" layoutY="370.0" text="Modify Flight" onAction="#modifyFlight" />
+      <Button fx:id="ModifyFlightCloseButton" layoutX="260.0" layoutY="370.0" text="Close" onAction="#close" />
+      <Label fx:id="ModifyFlightStatusLabel" layoutX="160.0" layoutY="410.0" text="" />
    </children>
 </AnchorPane>

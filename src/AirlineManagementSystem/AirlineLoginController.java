@@ -26,7 +26,7 @@ public class AirlineLoginController {
     private Label LoginStatusLabel;
 
     @FXML
-    private Button LoginButton;
+    private Button LoginLoginButton;
 
     @FXML
     public void Login(ActionEvent event) {
@@ -41,6 +41,8 @@ public class AirlineLoginController {
                 stage.setTitle("Airline Management System - Home");
                 stage.setScene(new Scene(root));
                 stage.show();
+                Stage stage1= (Stage)LoginLoginButton.getScene().getWindow();
+                stage1.close();
 
             } catch (IOException e) {
                 LoginStatusLabel.setText("Error loading home screen.");

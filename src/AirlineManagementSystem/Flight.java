@@ -1,69 +1,45 @@
-package AirlineManagementSystem;  // Make sure this is the same package as AddFlightController
+package AirlineManagementSystem;
+
+import java.time.LocalDate;
 
 public class Flight {
     private String flightCode;
     private String flightName;
-    private String source;
-    private String destination;
-    private int capacity;
-    private String dateOfJourney;
+    private String flightSource;
+    private String flightDestination;
+    private int flightCapacity;
+    private LocalDate flightDateOfJourney;
 
-    // Constructor
-    public Flight(String flightCode, String flightName, String source, String destination, int capacity, String dateOfJourney) {
+    public Flight(String flightCode, String flightName, String flightSource, String flightDestination, int flightCapacity, LocalDate flightDateOfJourney) {
         this.flightCode = flightCode;
         this.flightName = flightName;
-        this.source = source;
-        this.destination = destination;
-        this.capacity = capacity;
-        this.dateOfJourney = dateOfJourney;
+        this.flightSource = flightSource;
+        this.flightDestination = flightDestination;
+        this.flightCapacity = flightCapacity;
+        this.flightDateOfJourney = flightDateOfJourney;
     }
 
-    // Getters and Setters
     public String getFlightCode() {
         return flightCode;
-    }
-
-    public void setFlightCode(String flightCode) {
-        this.flightCode = flightCode;
     }
 
     public String getFlightName() {
         return flightName;
     }
 
-    public void setFlightName(String flightName) {
-        this.flightName = flightName;
+    public String getFlightSource() {
+        return flightSource;
     }
 
-    public String getSource() {
-        return source;
+    public String getFlightDestination() {
+        return flightDestination;
     }
 
-    public void setSource(String source) {
-        this.source = source;
+    public int getFlightCapacity() {
+        return flightCapacity;
     }
 
-    public String getDestination() {
-        return destination;
-    }
-
-    public void setDestination(String destination) {
-        this.destination = destination;
-    }
-
-    public int getCapacity() {
-        return capacity;
-    }
-
-    public void setCapacity(int capacity) {
-        this.capacity = capacity;
-    }
-
-    public String getDateOfJourney() {
-        return dateOfJourney;
-    }
-
-    public void setDateOfJourney(String dateOfJourney) {
-        this.dateOfJourney = dateOfJourney;
+    public LocalDate getFlightDateOfJourney() {
+        return flightDateOfJourney;
     }
 }

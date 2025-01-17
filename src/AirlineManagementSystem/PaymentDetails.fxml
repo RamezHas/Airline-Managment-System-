@@ -7,8 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="426.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="426.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AirlineManagementSystem.PaymentDetailsController">
    <children>
       <Label fx:id="AddFlightLabel1" layoutX="138.0" layoutY="14.0" prefHeight="46.0" prefWidth="324.0" text="Payment Details Module" textAlignment="CENTER" textFill="#841d2d">
          <font>
@@ -27,7 +26,7 @@
             <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
          </columnResizePolicy>
       </TableView>
-      <Button layoutX="255.0" layoutY="372.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="91.0" style="-fx-background-radius: 10; -fx-background-color: #1a2b4a;" text="Close" textFill="WHITE">
+      <Button fx:id="PaymentDetailsCloseButton" layoutX="255.0" layoutY="372.0" mnemonicParsing="false" onAction="#close" prefHeight="34.0" prefWidth="91.0" style="-fx-background-radius: 10; -fx-background-color: #1a2b4a;" text="Close" textFill="WHITE">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>

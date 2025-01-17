@@ -8,54 +8,34 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="439.0" prefWidth="557.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AirlineManagementSystem.AirlineHomeController">
+<AnchorPane prefHeight="439.0" prefWidth="557.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AirlineManagementSystem.AddFlightController">
    <children>
-      <Label fx:id="AddFlightLabel" layoutX="208.0" layoutY="14.0" prefHeight="46.0" prefWidth="144.0" text="Add Flight" textAlignment="CENTER" textFill="#841d2d">
+      <Label fx:id="AddFlightLabel" layoutX="208.0" layoutY="14.0" prefHeight="46.0" prefWidth="266.0" text="Add Flight" textAlignment="CENTER" textFill="#841d2d">
          <font>
             <Font name="System Bold" size="28.0" />
          </font>
       </Label>
-      <TextField fx:id="AddFlightFlightCodeTextField" layoutX="59.0" layoutY="66.0" prefHeight="34.0" prefWidth="440.0" promptText="Enter Flight Code" style="-fx-background-radius: 10;" AnchorPane.bottomAnchor="339.0" AnchorPane.leftAnchor="59.0" AnchorPane.rightAnchor="58.0" AnchorPane.topAnchor="66.0">
-         <font>
-            <Font size="14.0" />
-         </font>
-      </TextField>
-      <TextField fx:id="AddFlightFlightNameTextField" layoutX="60.0" layoutY="117.0" prefHeight="34.0" prefWidth="440.0" promptText="Enter Flight Name" style="-fx-background-radius: 10;">
-         <font>
-            <Font size="14.0" />
-         </font>
-      </TextField>
-      <TextField fx:id="AddFlightFlightSourceTextField" layoutX="58.0" layoutY="169.0" prefHeight="34.0" prefWidth="440.0" promptText="Enter Flight Source" style="-fx-background-radius: 10;">
-         <font>
-            <Font size="14.0" />
-         </font>
-      </TextField>
-      <TextField fx:id="AddFlightFlightDestinationTextField" layoutX="58.0" layoutY="217.0" prefHeight="34.0" prefWidth="440.0" promptText="Enter Flight Destination" style="-fx-background-radius: 10;">
-         <font>
-            <Font size="14.0" />
-         </font>
-      </TextField>
-      <TextField fx:id="AddFlightFlightCapacityTextField" layoutX="60.0" layoutY="270.0" prefHeight="34.0" prefWidth="440.0" promptText="Enter Flight Capacity" style="-fx-background-radius: 10;">
-         <font>
-            <Font size="14.0" />
-         </font>
-      </TextField>
+      <TextField fx:id="AddFlightFlightCodeTextField" layoutX="59.0" layoutY="66.0" prefHeight="34.0" prefWidth="440.0" promptText="Enter Flight Code" style="-fx-background-radius: 10;" />
+      <TextField fx:id="AddFlightFlightNameTextField" layoutX="60.0" layoutY="117.0" prefHeight="34.0" prefWidth="440.0" promptText="Enter Flight Name" style="-fx-background-radius: 10;" />
+      <TextField fx:id="AddFlightFlightSourceTextField" layoutX="58.0" layoutY="169.0" prefHeight="34.0" prefWidth="440.0" promptText="Enter Flight Source" style="-fx-background-radius: 10;" />
+      <TextField fx:id="AddFlightFlightDestinationTextField" layoutX="58.0" layoutY="217.0" prefHeight="34.0" prefWidth="440.0" promptText="Enter Flight Destination" style="-fx-background-radius: 10;" />
+      <TextField fx:id="AddFlightFlightCapacityTextField" layoutX="60.0" layoutY="270.0" prefHeight="34.0" prefWidth="440.0" promptText="Enter Flight Capacity" style="-fx-background-radius: 10;" />
       <DatePicker fx:id="AddFlightFlightDateOfJourneyDatePicker" layoutX="183.0" layoutY="323.0" prefHeight="26.0" prefWidth="190.0" promptText="Enter Flight Date of Journey" />
       <HBox layoutX="120.0" layoutY="370.0" prefHeight="34.0" prefWidth="317.0">
          <children>
-            <Button mnemonicParsing="false" prefHeight="34.0" prefWidth="79.0" style="-fx-background-radius: 10; -fx-background-color: #1a2b4a;" text="Clear All" textFill="WHITE">
+            <Button fx:id="AddFlightClearAllButton" mnemonicParsing="false" onAction="#clearAll" prefHeight="34.0" prefWidth="79.0" style="-fx-background-radius: 10; -fx-background-color: #1a2b4a;" text="Clear All" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
             </Button>
             <Label prefHeight="17.0" prefWidth="40.0" />
-            <Button mnemonicParsing="false" prefHeight="34.0" prefWidth="79.0" style="-fx-background-radius: 10; -fx-background-color: #1a2b4a;" text="Add Flight" textFill="WHITE">
+            <Button fx:id="AddFlightButton" mnemonicParsing="false" onAction="#addFlight" prefHeight="34.0" prefWidth="79.0" style="-fx-background-radius: 10; -fx-background-color: #1a2b4a;" text="Add Flight" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
             </Button>
             <Label prefHeight="17.0" prefWidth="40.0" />
-            <Button mnemonicParsing="false" prefHeight="34.0" prefWidth="79.0" style="-fx-background-radius: 10; -fx-background-color: #1a2b4a;" text="Close" textFill="WHITE">
+            <Button fx:id="AddFlightCloseButton" mnemonicParsing="false" onAction="#close" prefHeight="34.0" prefWidth="79.0" style="-fx-background-radius: 10; -fx-background-color: #1a2b4a;" text="Close" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>

@@ -10,6 +10,7 @@
         "c:\\Users\\ramez\\OneDrive\\Bureau\\javafx-sdk-23.0.1\\lib\\javafx.media.jar",
         "c:\\Users\\ramez\\OneDrive\\Bureau\\javafx-sdk-23.0.1\\lib\\javafx.swing.jar",
         "c:\\Users\\ramez\\OneDrive\\Bureau\\javafx-sdk-23.0.1\\lib\\javafx.web.jar",
-        "c:\\Users\\ramez\\OneDrive\\Bureau\\javafx-sdk-23.0.1\\lib\\javafx-swt.jar"
+        "c:\\Users\\ramez\\OneDrive\\Bureau\\javafx-sdk-23.0.1\\lib\\javafx-swt.jar",
+        "c:\\mysql-connector-j-9.1.0.jar"
     ]
 }

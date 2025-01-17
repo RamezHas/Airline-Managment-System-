@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Tab?>
@@ -13,90 +14,142 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AirlineManagementSystem.AirlineHomeController">
+<AnchorPane prefHeight="523.0" prefWidth="635.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AirlineManagementSystem.AirlineHomeController">
    <children>
-      <BorderPane prefHeight="390.0" prefWidth="621.0">
+      <BorderPane prefHeight="523.0" prefWidth="650.0">
          <left>
-            <VBox alignment="CENTER" prefHeight="390.0" prefWidth="142.0" BorderPane.alignment="CENTER">
+            <VBox alignment="CENTER" prefHeight="542.0" prefWidth="144.0" BorderPane.alignment="CENTER">
                <children>
-                  <Button mnemonicParsing="false" onAction="#addFlight" prefHeight="45.0" prefWidth="130.0" style="-fx-background-color: #1a2b4a; -fx-background-radius: 7;" text="Add Flight" textFill="WHITE">
+                  <Button contentDisplay="BOTTOM" mnemonicParsing="false" onAction="#addFlight" prefHeight="22.0" prefWidth="130.0" style="-fx-background-color: #1a2b4a; -fx-background-radius: 7;" text="Add Flight" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="14.0" />
                      </font>
+                     <graphic>
+                        <ImageView>
+                           <image>
+                              <Image url="@../../../../../../Downloads/travel.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
                   </Button>
                   <Label prefHeight="0.0" prefWidth="27.0">
                      <font>
                         <Font size="5.0" />
                      </font>
                   </Label>
-                  <Button mnemonicParsing="false" onAction="#modifyFlight" prefHeight="45.0" prefWidth="130.0" style="-fx-background-color: #1a2b4a; -fx-background-radius: 7;" text="Modify Flight" textFill="WHITE">
+                  <Button contentDisplay="BOTTOM" mnemonicParsing="false" onAction="#modifyFlight" prefHeight="22.0" prefWidth="130.0" style="-fx-background-color: #1a2b4a; -fx-background-radius: 7;" text="Modify Flight" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="14.0" />
                      </font>
+                     <graphic>
+                        <ImageView>
+                           <image>
+                              <Image url="@../../../../../../Downloads/searching.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
                   </Button>
                   <Label layoutX="64.0" layoutY="89.0" prefHeight="0.0" prefWidth="27.0">
                      <font>
                         <Font size="5.0" />
                      </font>
                   </Label>
-                  <Button mnemonicParsing="false" onAction="#removeFlight" prefHeight="45.0" prefWidth="130.0" style="-fx-background-color: #1a2b4a; -fx-background-radius: 7;" text="Remove Flight" textFill="WHITE">
+                  <Button contentDisplay="BOTTOM" mnemonicParsing="false" onAction="#removeFlight" prefHeight="22.0" prefWidth="130.0" style="-fx-background-color: #1a2b4a; -fx-background-radius: 7;" text="Remove Flight" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="14.0" />
                      </font>
+                     <graphic>
+                        <ImageView>
+                           <image>
+                              <Image url="@../../../../../../Downloads/flight-mode.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
                   </Button>
                   <Label layoutX="64.0" layoutY="363.0" prefHeight="0.0" prefWidth="27.0">
                      <font>
                         <Font size="5.0" />
                      </font>
                   </Label>
-                  <Button mnemonicParsing="false" onAction="#bookTicket" prefHeight="45.0" prefWidth="130.0" style="-fx-background-color: #1a2b4a; -fx-background-radius: 7;" text="Book Ticket" textFill="WHITE">
+                  <Button contentDisplay="BOTTOM" mnemonicParsing="false" onAction="#bookTicket" prefHeight="22.0" prefWidth="130.0" style="-fx-background-color: #1a2b4a; -fx-background-radius: 7;" text="Book Ticket" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="14.0" />
                      </font>
+                     <graphic>
+                        <ImageView>
+                           <image>
+                              <Image url="@../../../../../../Downloads/aeroplane.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
                   </Button>
                   <Label layoutX="64.0" layoutY="367.0" prefHeight="0.0" prefWidth="27.0">
                      <font>
                         <Font size="5.0" />
                      </font>
                   </Label>
-                  <Button mnemonicParsing="false" onAction="#cancelTicket" prefHeight="45.0" prefWidth="130.0" style="-fx-background-color: #1a2b4a; -fx-background-radius: 7;" text="Cancel Ticket" textFill="WHITE">
+                  <Button contentDisplay="BOTTOM" mnemonicParsing="false" onAction="#cancelTicket" prefHeight="22.0" prefWidth="130.0" style="-fx-background-color: #1a2b4a; -fx-background-radius: 7;" text="Cancel Ticket" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="14.0" />
                      </font>
+                     <graphic>
+                        <ImageView>
+                           <image>
+                              <Image url="@../../../../../../Downloads/cancel-ticket.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
                   </Button>
                   <Label layoutX="64.0" layoutY="371.0" prefHeight="0.0" prefWidth="27.0">
                      <font>
                         <Font size="5.0" />
                      </font>
                   </Label>
-                  <Button mnemonicParsing="false" onAction="#paymentDetails" prefHeight="45.0" prefWidth="130.0" style="-fx-background-color: #1a2b4a; -fx-background-radius: 7;" text="Payment Details" textFill="WHITE">
+                  <Button contentDisplay="BOTTOM" mnemonicParsing="false" onAction="#paymentDetails" prefHeight="22.0" prefWidth="130.0" style="-fx-background-color: #1a2b4a; -fx-background-radius: 7;" text="Payment Details" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="13.0" />
                      </font>
+                     <graphic>
+                        <ImageView>
+                           <image>
+                              <Image url="@../../../../../../Downloads/credit-card.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
                   </Button>
                   <Label layoutX="64.0" layoutY="375.0" prefHeight="0.0" prefWidth="27.0">
                      <font>
                         <Font size="5.0" />
                      </font>
                   </Label>
-                  <Button layoutX="19.0" layoutY="267.0" mnemonicParsing="false" onAction="#passengerDetails" prefHeight="45.0" prefWidth="130.0" style="-fx-background-color: #1a2b4a; -fx-background-radius: 7;" text="Passenger Details" textFill="WHITE">
+                  <Button contentDisplay="BOTTOM" layoutX="19.0" layoutY="267.0" mnemonicParsing="false" onAction="#passengerDetails" prefHeight="22.0" prefWidth="130.0" style="-fx-background-color: #1a2b4a; -fx-background-radius: 7;" text="Passenger Details" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="13.0" />
                      </font>
+                     <graphic>
+                        <ImageView>
+                           <image>
+                              <Image url="@../../../../../../Downloads/list.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
                   </Button>
                </children>
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
             </VBox>
          </left>
          <center>
-            <TabPane prefHeight="390.0" prefWidth="457.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+            <TabPane prefHeight="523.0" prefWidth="528.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
                <tabs>
                   <Tab text="Welcome">
                      <content>
                         <AnchorPane prefHeight="200.0" prefWidth="200.0">
                            <children>
-                              <AnchorPane prefHeight="363.0" prefWidth="486.0" style="-fx-background-color: #841d2d;">
+                              <AnchorPane prefHeight="495.0" prefWidth="506.0" style="-fx-background-color: #841d2d;">
                                  <children>
-                                    <ImageView fitHeight="112.0" fitWidth="327.0" layoutX="80.0" layoutY="126.0">
+                                    <ImageView fitHeight="374.0" fitWidth="497.0" layoutX="5.0" layoutY="61.0">
                                        <image>
                                           <Image url="@30_10_2024 18_34_22.png" />
                                        </image>
@@ -110,15 +163,15 @@
                   <Tab text="Show Flight Details">
                      <content>
                         <TableView fx:id="HomeTab2Table" prefHeight="361.0" prefWidth="372.0">
-                           <columns>
-                              <TableColumn fx:id="HomeTab2FlightCodeColumn" prefWidth="75.0" text="Flight Code" />
-                              <TableColumn fx:id="HomeTab2NameColumn" prefWidth="104.0" text="Name" />
-                              <TableColumn fx:id="HomeTab2SourceColumn" prefWidth="72.00006103515625" text="Source" />
-                              <TableColumn fx:id="HomeTab2DestinationColumn" text="Destination" />
-                              <TableColumn fx:id="HomeTab2CapacityColumn" prefWidth="68.0" text="Capacity" />
-                              <TableColumn fx:id="HomeTab2DateOfJourneyColumn" prefWidth="100.79998779296875" text="Date of Journey" />
-                           </columns>
-                        </TableView>
+    <columns>
+        <TableColumn fx:id="HomeTab2FlightCodeColumn" prefWidth="75.0" text="Flight Code" />
+        <TableColumn fx:id="HomeTab2NameColumn" prefWidth="104.0" text="Name" />
+        <TableColumn fx:id="HomeTab2SourceColumn" prefWidth="72.00006103515625" text="Source" />
+        <TableColumn fx:id="HomeTab2DestinationColumn" text="Destination" />
+        <TableColumn fx:id="HomeTab2CapacityColumn" prefWidth="68.0" text="Capacity" />
+        <TableColumn fx:id="HomeTab2DateOfJourneyColumn" prefWidth="100.79998779296875" text="Date of Journey" />
+    </columns>
+</TableView>
                      </content>
                   </Tab>
                </tabs>

@@ -3,12 +3,15 @@ package AirlineManagementSystem;
 import java.time.LocalDate;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
 
 public class AddFlightController {
 
@@ -27,7 +30,7 @@ public class AddFlightController {
     @FXML
     private Button AddFlightClearAllButton;
     @FXML
-    private Button AddFlight;
+    private Button AddFlightButton;
     @FXML
     private Button AddFlightCloseButton;
     @FXML
@@ -45,53 +48,51 @@ public class AddFlightController {
     }
 
     // Adds a flight after validation
-    @SuppressWarnings("unused")
     @FXML
-    private void AddFlight(ActionEvent event) {
-        String f_code = AddFlightFlightCodeTextField.getText();
-        String f_name = AddFlightFlightNameTextField.getText();
-        String f_source = AddFlightFlightSourceTextField.getText();
-        String f_destination = AddFlightFlightDestinationTextField.getText();
-        String f_capacity = AddFlightFlightCapacityTextField.getText();
-        String f_dateofjourney = (AddFlightFlightDateOfJourneyDatePicker.getValue()).toString();
+    private void addFlight(ActionEvent event) {
 
-        // Check if any field is empty
-        if (f_code.isEmpty() || f_name.isEmpty() || f_source.isEmpty() || f_destination.isEmpty() || f_capacity.isEmpty() || f_dateofjourney.isEmpty()) {
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setHeaderText(null);
-            alert.setContentText("Please Do Not Leave Any Field Empty");
-            alert.showAndWait();
+        String flightCode = AddFlightFlightCodeTextField.getText();
+        String flightName = AddFlightFlightNameTextField.getText();
+        String flightSource = AddFlightFlightSourceTextField.getText();
+        String flightDestination = AddFlightFlightDestinationTextField.getText();
+        String flightCapacityStr = AddFlightFlightCapacityTextField.getText();
+        LocalDate flightDateOfJourney = AddFlightFlightDateOfJourneyDatePicker.getValue();
+
+        if (flightCode.isEmpty() || flightName.isEmpty() || flightSource.isEmpty() || flightDestination.isEmpty() || flightCapacityStr.isEmpty() || flightDateOfJourney == null) {
+            // Show error message
+            System.out.println("Please fill all fields");
             return;
         }
 
-        // Validate capacity is a valid number
+        int flightCapacity;
         try {
-            int capacity = Integer.parseInt(f_capacity);
-            if (capacity <= 0) {
-                throw new NumberFormatException("Capacity must be greater than 0.");
-            }
+            flightCapacity = Integer.parseInt(flightCapacityStr);
         } catch (NumberFormatException e) {
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setHeaderText(null);
-            alert.setContentText("Please enter a valid capacity (positive integer).");
-            alert.showAndWait();
+            // Show error message
+            System.out.println("Invalid capacity");
             return;
         }
 
-        // Create the new flight object
-        Flight newFlight = new Flight(f_code, f_name, f_source, f_destination, Integer.parseInt(f_capacity), f_dateofjourney);
+        // Insert flight into database
+        String sql = "INSERT INTO flights (flight_code, flight_name, flight_source, flight_destination, flight_capacity, flight_date_of_journey) VALUES (?, ?, ?, ?, ?, ?)";
 
-        // Here you would save the flight to a database or list
-        // flightService.addFlight(newFlight); // Example method for adding flight
+        try (Connection conn = MySQLConnector.getConnection();
+             PreparedStatement pstmt = conn.prepareStatement(sql)) {
 
-        // Show success alert
-        Alert successAlert = new Alert(Alert.AlertType.INFORMATION);
-        successAlert.setHeaderText(null);
-        successAlert.setContentText("Flight added successfully!");
-        successAlert.showAndWait();
+            pstmt.setString(1, flightCode);
+            pstmt.setString(2, flightName);
+            pstmt.setString(3, flightSource);
+            pstmt.setString(4, flightDestination);
+            pstmt.setInt(5, flightCapacity);
+            pstmt.setDate(6, java.sql.Date.valueOf(flightDateOfJourney));
 
-        // Optionally reset the form after successful submission
-        clearAll(event);
+            pstmt.executeUpdate();
+            System.out.println("Flight added successfully");
+
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+        
     }
 
     // Closes the current window when the close button is clicked

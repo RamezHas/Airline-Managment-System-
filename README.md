@@ -58,14 +58,5 @@ The **Airline Management System** is a JavaFX-based application designed to mana
 
 ---
 
-## 📜 License
-This project is **open-source** and contributions are welcome! 🤝
-
----
-
-## ✍️ Author
-[Your Name] - 📩 Reach out with feedback! 🚀
-
-
 
 

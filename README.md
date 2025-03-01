@@ -34,7 +34,7 @@ The **Airline Management System** is a JavaFX-based application designed to mana
 1. Ensure you have **Java (JDK 11 or later)** installed.
 2. Clone the repository:
    ```sh
-   git clone https://github.com/your-username/airline-management-system.git
+   git clone https://github.com/RamezHas/airline-management-system.git
    cd airline-management-system
    ```
 3. Open the project in an **IDE** (Eclipse, IntelliJ IDEA, or NetBeans).
